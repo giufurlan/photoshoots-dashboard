@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+.pull-rigth{
+  display: flex;
+  justify-content: flex-end;
+}
+.dashboardTypeRow {
+  cursor: pointer;
+}
+
+.dashboardTotalCell{
+  padding: 4px 8px; text-align: center; border-top: 1px solid #444;
+}
+
+.p-4px-8px {
+  padding: 4px 8px;
+}
+
+.p-4px-16px {
+  padding: 4px 8px;
+}
+
+.text-capitalized {
+  text-transform: capitalize;
+}
+
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+
+.selected{
+  background-color: #94efff;
+}
+
+.client-table{
+  background-color: #94efff;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+  border-radius: 10px;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.btn-close{
+  border: none;
+  background-color: white;
+  font-size: 30px;
+  font-weight: bolder;
+}

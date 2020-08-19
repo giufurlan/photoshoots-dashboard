@@ -25,6 +25,7 @@ describe('DashboardTypeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(component.showDashboardClient()).toBeFalse();
   });
 
   it('should insert a new key,value on dashboardDataPerDay for no existing key', () => {
@@ -88,6 +89,7 @@ describe('DashboardTypeComponent', () => {
 
     expect(component.photoshootClientList.length).toBe(data.filter(p => p.type === photoshootType).length);
     expect(component.photoshootClientList.every(p => p.type === photoshootType)).toBeTrue();
+    expect(component.showDashboardClient()).toBeTrue();
   }));
 });
 

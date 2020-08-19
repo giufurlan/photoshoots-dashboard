@@ -9,7 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardTypeComponent
+    DashboardTypeComponent,
+    DashboardClientComponent
   ],
   imports: [
     BrowserModule,

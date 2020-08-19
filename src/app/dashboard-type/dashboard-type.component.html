@@ -7,6 +7,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let type of dashboardDataPerDayKeys"
+      [ngClass]="{selected: hasRowSelected(type)}"
       class="dashboardTypeRow p-4px-8px"
       (click)="onClickPhotoshootType(type)">
     <th class="p-4px-8px text-left">{{type}}</th>
@@ -14,9 +15,14 @@
   </tr>
 
   <tr class="p-4px-16px">
-    <th class="dashboardTotalCell">Total</th>
+    <th class="dashboardTotalCell" >Total</th>
     <td *ngFor="let tot of totalPerDay"
-        style="">{{tot}}</td>
+        class="dashboardTotalCell">{{tot}}</td>
   </tr>
   </tbody>
 </table>
+
+<app-dashboard-client
+  *ngIf="showDashboardClient()"
+  [data]="photoshootClientList"
+(closeModalEvent)="closeModal($event)"></app-dashboard-client>

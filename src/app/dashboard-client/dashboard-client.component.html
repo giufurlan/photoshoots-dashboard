@@ -1,0 +1,20 @@
+<div class="pull-rigth">
+  <button class="btn-close" (click)="onClickCloseModal()">&times;</button>
+</div>
+<table class="client-table">
+  <thead>
+  <tr>
+    <th class="p-4px-8px"></th>
+    <th *ngFor="let day of daysOfTheWeek"
+        class="p-4px-8px text-capitalized">{{day}}</th>
+  </tr>
+  </thead>
+  <tbody style="height: 300px; overflow-y: auto;">
+  <tr *ngFor="let type of getClientKeySort()" class="p-4px-8px dashboardClientRow">
+    <th style="padding: 4px 8px; text-align: left;">{{type}}</th>
+    <td *ngFor="let data of dashboardDataPerClient.get(type)"
+        class="p-4px-8px text-center">{{data}}</td>
+  </tr>
+  </tbody>
+</table>
+

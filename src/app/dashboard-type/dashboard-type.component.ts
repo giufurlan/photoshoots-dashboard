@@ -5,8 +5,7 @@ import {getIndexFromDay, getOccurency} from '../utils/utils';
 
 @Component({
   selector: 'app-dashboard-type',
-  templateUrl: './dashboard-type.component.html',
-  styleUrls: ['./dashboard-type.component.css']
+  templateUrl: './dashboard-type.component.html'
 })
 export class DashboardTypeComponent implements OnChanges {
 
@@ -18,7 +17,10 @@ export class DashboardTypeComponent implements OnChanges {
   dashboardDataPerDayKeys = [];
   totalPerDay: Array<number> = [];
 
+  dashboardClient = false;
   photoshootClientList: Array<PhotoshootData> = [];
+
+  typeSelected = String('');
 
   constructor() {
     this.totalPerDay = Array.from(Array(7), _ => 0);
@@ -29,7 +31,9 @@ export class DashboardTypeComponent implements OnChanges {
   }
 
   onClickPhotoshootType(type: string): void {
+    this.typeSelected = type;
     this.photoshootClientList = this.data.filter(p => p.type === type);
+    this.dashboardClient = true;
   }
 
   initMap(photoshootData: Array<PhotoshootData>): void {
@@ -47,5 +51,18 @@ export class DashboardTypeComponent implements OnChanges {
 
   private getOccurencyPerDay(key: string): Array<number> {
     return getOccurency(this.dashboardDataPerDay, key);
+  }
+
+  showDashboardClient(): boolean {
+    return this.dashboardClient;
+  }
+
+  closeModal(close: boolean) {
+    this.dashboardClient = close;
+    this.typeSelected = String('');
+  }
+
+  hasRowSelected(type: string) {
+    return this.typeSelected === type;
   }
 }

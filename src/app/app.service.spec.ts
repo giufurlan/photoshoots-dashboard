@@ -1,7 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 import {AppService} from './app.service';
 import {PhotoshootResponse} from './model/photoshoot.response';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {getPhotoshoots, getPhotoshootsDetails} from './utils/test/test-photoshoots';
 import {PhotoshootDetailsResponse} from './model/photoshoot-details.response';
