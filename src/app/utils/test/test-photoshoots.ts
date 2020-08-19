@@ -1,5 +1,6 @@
 import {PhotoshootResponse} from '../../model/photoshoot.response';
 import {PhotoshootDetailsResponse} from '../../model/photoshoot-details.response';
+import {PhotoshootData} from '../../model/photoshoot.model';
 
 export function getPhotoshoots(): Array<PhotoshootResponse> {
   return [
@@ -28,5 +29,20 @@ export function getPhotoshootsDetails(): Array<PhotoshootDetailsResponse> {
     {id: 8, title: 'Alexandr', number_of_photos: 360, country: 'Libya', package: 'XL'},
     {id: 9, title: 'Sandie', number_of_photos: 307, country: 'Italy', package: 'XL'},
     {id: 10, title: 'Curry', number_of_photos: 95, country: 'Brunei', package: 'L'}
+  ];
+}
+
+export function getPhotoshootsData(): Array<PhotoshootData> {
+  return [
+    {id: 1, dayOfTheWeek: 'FRIDAY', type: 'Real Estate', clientId: 71, numOfPhoto: 20},
+    {id: 2, dayOfTheWeek: 'TUESDAY', type: 'Food', clientId: 96, numOfPhoto: 492},
+    {id: 3, dayOfTheWeek: 'WEDNESDAY', type: 'Real Estate', clientId: 90, numOfPhoto: 344},
+    {id: 4, dayOfTheWeek: 'TUESDAY', type: 'Other', clientId: 70, numOfPhoto: 296},
+    {id: 5, dayOfTheWeek: 'THURSDAY', type: 'Other', clientId: 55, numOfPhoto: 451},
+    {id: 6, dayOfTheWeek: 'THURSDAY',  type: 'Other', clientId: 104, numOfPhoto: 447},
+    {id: 7, dayOfTheWeek: 'MONDAY', type: 'Event', clientId: 73, numOfPhoto: 172},
+    {id: 8, dayOfTheWeek: 'TUESDAY', type: 'Food', clientId: 113, numOfPhoto: 360},
+    {id: 9, dayOfTheWeek: 'WEDNESDAY', type: 'Other', clientId: 82, numOfPhoto: 307},
+    {id: 10, dayOfTheWeek: 'MONDAY', type: 'Event', clientId: 107, numOfPhoto: 95}
   ];
 }

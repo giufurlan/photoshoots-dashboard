@@ -1,0 +1,22 @@
+<table>
+  <thead>
+  <tr>
+    <th style="padding: 4px 8px;"></th>
+    <th *ngFor="let day of daysOfTheWeek" style="padding: 4px 8px; text-transform: capitalize;">{{day}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let type of dashboardDataPerDayKeys" style="padding: 4px 8px; cursor: pointer;"
+      class="dashboardTypeRow"
+      (click)="onClickPhotoshootType(type)">
+    <th style="padding: 4px 8px; text-align: left;">{{type}}</th>
+    <td *ngFor="let data of dashboardDataPerDay.get(type)" style="padding: 4px 8px; text-align: center;">{{data}}</td>
+  </tr>
+
+  <tr style="padding: 4px 16px; ">
+    <th style="padding: 4px 8px; text-align: left; border-top: 1px solid #444;">Total</th>
+    <td *ngFor="let tot of totalPerDay"
+        style="padding: 4px 8px; text-align: center; border-top: 1px solid #444;">{{tot}}</td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,4 @@
+.pull-rigth{
+  display: flex;
+  justify-content: flex-end;
+}
