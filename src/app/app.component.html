@@ -1,0 +1,9 @@
+<div class="pull-rigth">
+  <button class="button"
+          id="moreData"
+          (click)="moreData()"
+          [disabled]="noMoreData()">
+    Get more data
+  </button>
+</div>
+<app-dashboard-type [data]="photoshootData"></app-dashboard-type>
