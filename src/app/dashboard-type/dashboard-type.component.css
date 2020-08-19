@@ -1,0 +1,26 @@
+.dashboardTypeRow {
+  cursor: pointer;
+}
+
+.dashboardTotalCell{
+  padding: 4px 8px; text-align: center; border-top: 1px solid #444;
+}
+
+.p-4px-8px {
+  padding: 4px 8px;
+}
+
+.p-4px-16px {
+  padding: 4px 8px;
+}
+
+.text-capitalized {
+  text-transform: capitalize;
+}
+
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
